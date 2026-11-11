@@ -170,7 +170,7 @@ main.wadah {
 }
 
 .tombol:hover {
-    background: var(--krem-tua);
+    background: #8bcf8b;
 }
 
 .tombol-utama {
@@ -180,7 +180,7 @@ main.wadah {
 }
 
 .tombol-utama:hover {
-    background: var(--hijau-muda);
+    background: #8bcf8b;
 }
 
 .tombol-lebar {
@@ -352,7 +352,7 @@ main.wadah {
 }
 
 .tombol-cari:hover {
-    background: var(--hijau-muda);
+    background: #8bcf8b;
 }
 
 /*FITUR NAVIGASI DAN LENCANA KERANJANG*/
@@ -381,7 +381,7 @@ main.wadah {
 .navigasi a:hover,
 .navigasi button:hover {
     border-color: var(--aksen);
-    background: var(--hijau-muda);
+    background: #8bcf8b;
 }
 
 .lencana {
@@ -407,7 +407,7 @@ body[data-halaman="keranjang"] [data-nav="keranjang"],
 body[data-halaman="checkout"] [data-nav="keranjang"],
 body[data-halaman="login"] [data-nav="login"] {
     border-color: var(--aksen);
-    background: var(--hijau-muda);
+    background: #8bcf8b;
 }
 /*FITUR TATA LETAK KATALOG*/
 .tata-katalog {
@@ -833,7 +833,7 @@ background: var(--krem);
 }
 
 .kasir-jumlah button:hover:not(:disabled) {
-    background: var(--hijau-tua);
+    background: #8bcf8b;
     color: var(--putih);
 }
 
@@ -904,7 +904,7 @@ background: var(--krem);
 }
 
 .tombol-keranjang:hover:not(:disabled) {
-    background: var(--krem-tua);
+    background: #8bcf8b;
 }
 
 .tombol-keranjang:disabled {
@@ -930,7 +930,7 @@ background: var(--krem);
 }
 
 .tombol-pesan:hover:not(:disabled) {
-    background: var(--hijau-muda);
+    background: #8bcf8b;
 }
 
 .tombol-pesan:disabled {
@@ -1024,7 +1024,7 @@ background: var(--krem);
 } 
  
 .pengatur-jumlah button:hover:not(:disabled) { 
-  background: var(--krem-tua); 
+  background: #8bcf8b; 
 } 
  
 .pengatur-jumlah button:disabled { 
@@ -1129,7 +1129,7 @@ isi {
    width: 28px; 
   height: 28px; 
   border-radius: 50%; 
-  background: var(--hijau-tua); 
+  background: #337733; 
   color: var(--aksen-terang); 
   font-size: 0.85rem; 
 } 

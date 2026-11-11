@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Kedai Teh - Teh Desa - Web E commerce dengan HTML, CSS, dan Java script murni"
+    />
+    <title>Katalog Teh Desa</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="kepala">
+      <div class="wadah kepala-isi">
+        <a
+          href="#/"
+          class="logo"
+          aria-label="Kedai Teh Desa, ke halaman katalog"
+        >
+          <img src="logo.png" alt="" width="44" height="44" />
+          <span class="logo-nama"> Kedai Teh Desa</span>
+        </a>
+
+        <!--FITUR PENCARIAN-->
+        <form class="cari" id="form-cari" role="search">
+          <label class="hanya-pembaca-layar" for="input-cari">Cari menu</label>
+          <input type="search" id="input-cari" autocomplete="off" />
+          <button type="submit" class="tombol-cari">
+            <img src="ikon.png" alt="" width="16" height="16" />
+            <span>Cari</span>
+          </button>
+        </form>
+
+        <!--NAvigasi-->
+        <nav class="navigasi" aria-label="Navigasi utama">
+          <a href="#/keranjang" data-nav="keranjang" class="nav-keranjang">
+            <img src="keranjang.png" alt="" width="20" height="20" />
+            <span>keranjang</span>
+            <span class="lencana" id="lencana-keranjang">B</span>
+          </a>
+          <a href="#/login" id="nav-masuk" data-nav="login">Masuk</a>
+          <button type="button" id="tombol-keluar">Keluar</button>
+        </nav>
+      </div>
+    </header>
+
+    <!--ISI HALAMAN-->
+    <main class="wadah">
+      <!--MENU KATALOG-->
+      <section id="halaman-katalog">
+        <h1 class="hanya-pembaca-layar">Katalog menu kedai Teh Desa</h1>
+
+        <div class="tata-katalog">
+          <!--FILTEER KATEGORI-->
+          <aside class="sisi" aria-label="kategori menu">
+            <h2 class="sisi-judul">
+              <img src="menu.png" alt="" width="16" height="16" />
+              kategori menu
+            </h2>
+            <div class="kategori">
+              <label class="sisi-item"
+                ><input
+                  type="radio"
+                  name="kategori"
+                  value="semua"
+                  checked
+                /><span>Semua menu</span></label
+              >
+              <label class="sisi-item"
+                ><input
+                  type="radio"
+                  name="kategori"
+                  value="Varian Fruit"
+                /><span>Varian Fruit</span></label
+              >
+              <label class="sisi-item"
+                ><input type="radio" name="kategori" value="Varian Tea" /><span
+                  >Varian Tea</span
+                ></label
+              >
+            </div>
+          </aside>
+
+          <!--FITUR DAFTAR MENU KARTU MENU-->
+          <div class="hasil">
+            <div class="grid-produk" id="grid-produk">
+              <!--MENU 1-->
+              <article
+                class="kartu"
+                data-id="1"
+                data-nama="Blueberry Tea"
+                data-kategori="Varian Fruit"
+                data-harga="5000"
+                data-deskripsi="Perpaduan unik antara teh hitam pilihan dengan manisnya buah blueberry segar. Menghadirkan sensasi rasa sedikit asam, manis, dan aroma buah yang menyegarkan di setiap tegukan."
+              >
+                <a class="kartu-tautan" href="#/detail/1">
+                  <div class="kartu-gambar">
+                    <div class="kartu-bingkai bingkai-foto">
+                      <img class="foto" src="blueberrytea.jpg" alt="" />
+                      <strong class="kartu-label label-foto"
+                        >Blueberry Tea</strong
+                      >
+                    </div>
+                  </div>
+                  <div class="kartu-isi">
+                    <h2 class="kartu-nama">blueberrytea</h2>
+                    <p class="kartu-catatan">Asam manis rasa blueberry</p>
+                  </div>
+                </a>
+                <div class="kartu-bawah">
+                  <p class="harga">Rp.5000</p>
+                </div>
+              </article>
+              <!--MENU 2-->
+              <article
+                class="kartu"
+                data-id="2"
+                data-nama="Greentea"
+                data-kategori="Varian Tea"
+                data-harga="5000"
+                data-deskripsi="Teh hijau murni berkualitas tinggi yang kaya antioksidan. Memiliki cita rasa yang khas, ringan, dan menenangkan dengan aroma herbal alami yang menyegarkan tubuh dan pikiran."
+              >
+                <a class="kartu-tautan" href="#/detail/2">
+                  <div class="kartu-gambar">
+                    <div class="kartu-bingkai bingkai-foto">
+                      <img class="foto" src="greentea.jpg" alt="" />
+                      <strong class="kartu-label label-foto">Greentea</strong>
+                    </div>
+                  </div>
+                  <div class="kartu-isi">
+                    <h2 class="kartu-nama">greentea</h2>
+                    <p class="kartu-catatan">
+                      Teh hijau murni yang mengandung anti oksidan
+                    </p>
+                  </div>
+                </a>
+                <div class="kartu-bawah">
+                  <p class="harga">Rp.5000</p>
+                </div>
+              </article>
+              <!--MENU3-->
+              <article
+                class="kartu"
+                data-id="3"
+                data-nama="Lychee Tea"
+                data-kategori="Varian Fruit"
+                data-harga="5000"
+                data-deskripsi="Teh hitam beraroma wangi yang disajikan dengan sirup leci manis serta buah leci asli. Memberikan kesegaran tropis yang manis dan sangat cocok dinikmati saat cuaca hangat."
+              >
+                <a class="kartu-tautan" href="#/detail/3">
+                  <div class="kartu-gambar">
+                    <div class="kartu-bingkai bingkai-foto">
+                      <img class="foto" src="lycheetea.jpg" alt="" />
+                      <strong class="kartu-label label-foto">Lychee Tea</strong>
+                    </div>
+                  </div>
+                  <div class="kartu-isi">
+                    <h2 class="kartu-nama">lycheetea</h2>
+                    <p class="kartu-catatan">
+                      Teh beraroma wangi dengan sirup buah leci
+                    </p>
+                  </div>
+                </a>
+                <div class="kartu-bawah">
+                  <p class="harga">Rp.5000</p>
+                </div>
+              </article>
+              <!--MENU 4-->
+              <article
+                class="kartu"
+                data-id="4"
+                data-nama="PassionFruit Tea"
+                data-kategori="Varian Fruit"
+                data-harga="5000"
+                data-deskripsi="Teh buah dengan ekstrak markisa asli yang menawarkan sensasi rasa asam manis eksotis yang kuat. Memberikan dorongan kesegaran instan yang membangkitkan semangat."
+              >
+                <a class="kartu-tautan" href="#/detail/4">
+                  <div class="kartu-gambar">
+                    <div class="kartu-bingkai bingkai-foto">
+                      <img class="foto" src="passionfruittea.jpg" alt="" />
+                      <strong class="kartu-label label-foto"
+                        >PassionFruit Tea</strong
+                      >
+                    </div>
+                  </div>
+                  <div class="kartu-isi">
+                    <h2 class="kartu-nama">passionfruittea</h2>
+                    <p class="kartu-catatan">
+                      Teh dengan extrak rasa buah markisa
+                    </p>
+                  </div>
+                </a>
+                <div class="kartu-bawah">
+                  <p class="harga">Rp.5000</p>
+                </div>
+              </article>
+              <!--MENU 5-->
+              <article
+                class="kartu"
+                data-id="5"
+                data-nama="Thai tea"
+                data-kategori="Varian Tea"
+                data-harga="5000"
+                data-deskripsi="Teh hitam pekat khas Thailand yang diracik dengan rempah pilihan dan dipadu bersama susu kental manis serta susu evaporasi. Menghasilkan rasa yang creamy, manis, dan sangat kaya di lidah."
+              >
+                <a class="kartu-tautan" href="#/detail/5">
+                  <div class="kartu-gambar">
+                    <div class="kartu-bingkai bingkai-foto">
+                      <img class="foto" src="thaitea.jpg" alt="" />
+                      <strong class="kartu-label label-foto">Thai tea</strong>
+                    </div>
+                  </div>
+                  <div class="kartu-isi">
+                    <h2 class="kartu-nama">thaitea</h2>
+                    <p class="kartu-catatan">Teh khas Thailand</p>
+                  </div>
+                </a>
+                <div class="kartu-bawah">
+                  <p class="harga">Rp.5000</p>
+                </div>
+              </article>
+            </div>
+            <!--FITUR PESAN MENU TIDAK DITEMUKAN-->
+            <p class="kosong" id="katalog-kosong">
+              Menu tidak ditemukan, Coba kata lain
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--TEMPLATE BARIS BARANG-->
+      <template id="templat-baris">
+        <article class="baris-keranjang">
+          <div class="baris-gambar"><img class="foto" src="" alt="" /></div>
+          <div class="baris-info">
+            <a href="#/"></a>
+            <p></p>
+          </div>
+          <div class="baris-aksi">
+            <div class="pengatur-jumlah">
+              <button
+                type="button"
+                data-aksi="kurang"
+                aria-label="Kurangi jumlah"
+              >
+                -
+              </button>
+              <span class="jumlah"></span>
+              <button
+                type="button"
+                data-aksi="tambah"
+                aria-label="Tambah jumlah"
+              >
+                +
+              </button>
+            </div>
+            <p class="baris-subtotal"></p>
+            <button type="button" class="tombol-teks" data-aksi="hapus">
+              Hapus
+            </button>
+          </div>
+        </article>
+      </template>
+
+      <!--MENU LOGIN-->
+      <section id="halaman-login">
+        <div class="masuk">
+          <!--FOTO LOGIN-->
+          <div class="masuk-visual">
+            <img src="bg2.jpg" alt="" />
+          </div>
+
+          <!--FITUR FORMULIR MASUK-->
+          <form class="masuk-form" id="form-login">
+            <!--LOGO DAN JUDUL LOGIN-->
+            <img
+              class="masuk-logo"
+              src="logo.png"
+              alt="Kedai Teh Desa"
+              width="72"
+              height="72"
+            />
+            <h1>Selamat datang</h1>
+            <p class="masuk-info">Masuk ke akunmu untuk melanjutkan</p>
+
+            <div class="kolom-isian">
+              <!--FITUR ISIAN USERNAME-->
+              <label for="isian-username">Username</label>
+              <input
+                type="text"
+                id="isian-username"
+                autocomplete="username"
+                required
+              />
+              <p class="pesan-galat">Username wajib di isi</p>
+            </div>
+
+            <div class="kolom-isian">
+              <!--FITUR ISIAN PASSWORD DAN PESAN LOGIN SAlAH-->
+              <label for="isian-password">Password</label>
+              <input
+                type="password"
+                id="isian-password"
+                autocomplete="current-password"
+                required
+              />
+              <p class="pesan-galat">Password wajib di isi.</p>
+              <p class="pesan-galat" id="login-salah" hidden>
+                Username atau Password salah.
+              </p>
+            </div>
+            <!--TOMBOL MASUK-->
+            <button
+              type="submit"
+              class="tombol tombol-utama tombol-lebar tombol-kirim"
+            >
+              Masuk
+            </button>
+            <!--KEMBALI KE KATALOG-->
+            <a class="masuk-kembali" href="#/">Kembali ke katalog</a>
+          </form>
+        </div>
+      </section>
+
+      <!--MENU DETAIL MENU-->
+      <section id="halaman-detail" hi>
+        <!--KEMBALI KE KATALOG-->
+        <a class="tautan-kembali" href="#/">Kembali ke katalog</a>
+        <!--pesan menu tidak ditemukan-->
+        <p class="kosong" id="detail-tidak-ada" hidden>Menu tidak ditemukan</p>
+
+        <article class="detail" id="isi-detail">
+          <!--FITUR FOTO MENU-->
+          <div class="detail-gambar">
+            <img class="foto" id="detail-gambar" src="bg2.jpg" alt="" />
+          </div>
+
+          <div class="detail-info">
+            <!--FITUR NAMA DAN DESKRIPSI MENU-->
+            <h1 id="detail-nama"></h1>
+            <p class="detail-deskripsi" id="detail-deskripsi"></p>
+
+            <!--FITUR KASIR-->
+            <div class="kasir" role="group" aria-label="Rincian pesanan">
+              <div class="kasir-judul">
+                <span>Item</span>
+                <span>Jumlah</span>
+                <span>Subtotal</span>
+              </div>
+              <div class="kasir-baris">
+                <div class="kasir-info">
+                  <span class="kasir-nama" id="kasir-nama"></span>
+                  <span class="kasir-harga" id="kasir-harga"></span>
+                </div>
+                <div class="kasir-jumlah">
+                  <button
+                    type="button"
+                    id="tombol-kurang"
+                    aria-label="Kurangi jumlah"
+                  >
+                    -
+                  </button>
+                  <label class="hanya-pembaca-layar" for="isian-jumlah"
+                    >Jumlah</label
+                  >
+                  <input type="number" id="isian-jumlah" min="1" value="1" />
+                  <button
+                    type="button"
+                    id="tombol-tambah"
+                    aria-label="Tambah jumlah"
+                  >
+                    +
+                  </button>
+                </div>
+                <span class="kasir-subtotal total-teks"></span>
+              </div>
+              <div class="kasir-total">
+                <span>Total bayar</span>
+                <strong class="total-teks"></strong>
+              </div>
+            </div>
+
+            <!--TAMBAH KERANJANG DAN PESAN SEKARANG-->
+            <div class="tombol-aksi">
+              <button
+                type="button"
+                class="tombol-keranjang"
+                id="tombol-keranjang"
+              >
+                Tambah ke keranjang
+              </button>
+              <button type="button" class="tombol-pesan" id="tombol-pesan">
+                <span class="total-teks"></span>
+                <span>Pesan sekarang</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!--MENU KERANJANG-->
+      <section id="halaman-keranjang">
+        <h1 class="judul-halaman">Keranjang</h1>
+
+        <!--KERANJANG KOSONG-->
+        <div class="kosong" id="keranjang-kosong">
+          <p>Keranjang masih kosong.</p>
+          <a class="tombol tombol-utama" href="#/">Mulai belanja</a>
+        </div>
+
+        <div class="dua-kolom" id="keranjang-isi">
+          <!-- DAFTAR BARANG KERANJANG-->
+          <div class="daftar-keranjang" id="daftar-keranjang"></div>
+
+          <!-- RINGKASAN KERANJANG-->
+          <aside class="struk struk-menempel" aria-label="Ringkasan keranjang">
+            <h2>Ringkasan</h2>
+            <div class="struk-baris">
+              <span>Jumlah barang</span><span id="keranjang-jumlah">0</span>
+            </div>
+            <div class="struk-baris struk-total">
+              <span>Total harga</span><span id="keranjang-subtotal">Rp0</span>
+            </div>
+            <div class="struk-aksi">
+              <a class="tombol tombol-utama" href="#/checkout"
+                >Lanjut ke checkout</a
+              >
+              <a class="tombol" href="#/">Lanjut belanja</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!--MENU CHECKOUT-->
+      <section id="halaman-checkout">
+        <!-- KEMBALI KE KERANJANG-->
+        <a class="tautan-kembali" href="#/keranjang">Kembali ke keranjang</a>
+        <h1 class="judul-halaman">Checkout</h1>
+
+        <div class="dua-kolom">
+          <form id="form-checkout">
+            <!-- DATA PEMESANAN-->
+            <section class="kotak" aria-labelledby="judul-data">
+              <h2 class="kotak-judul" id="judul-data">
+                <span class="kotak-nomor">1</span>Kontak pemesan
+              </h2>
+
+              <div class="baris-isian">
+                <div class="kolom-isian">
+                  <label for="isian-nama">Nama lengkap</label>
+                  <input
+                    type="text"
+                    id="isian-nama"
+                    autocomplete="name"
+                    required
+                    pattern="[A-Za-z .'\-]{3,}"
+                  />
+                  <p class="pesan-galat">
+                    Nama wajib diisi, minimal 3 huruf (hanya huruf dan spasi).
+                  </p>
+                </div>
+                <div class="kolom-isian">
+                  <label for="isian-hp">Nomor HP</label>
+                  <input
+                    type="tel"
+                    id="isian-hp"
+                    autocomplete="tel"
+                    required
+                    pattern="(\+62|62|0)8[0-9]{8,11}"
+                  />
+                  <p class="pesan-galat">
+                    Nomor HP wajib diisi, angka saja, diawali 08 atau +62.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!--FITUR ALAMAT PENGIRIMAN-->
+            <section class="kotak" aria-labelledby="judul-kirim">
+              <h2 class="kotak-judul" id="judul-kirim">
+                <span class="kotak-nomor">2</span>Alamat pengiriman
+              </h2>
+
+              <div class="kolom-isian">
+                <label for="isian-alamat">Alamat lengkap</label>
+                <textarea
+                  id="isian-alamat"
+                  rows="3"
+                  autocomplete="street-address"
+                  required
+                  minlength="10"
+                ></textarea>
+                <p class="pesan-galat">
+                  Alamat wajib diisi lengkap (minimal 10 karakter).
+                </p>
+              </div>
+              <div class="kolom-isian">
+                <label for="isian-kota">Kecamatan / kota</label>
+                <input
+                  type="text"
+                  id="isian-kota"
+                  autocomplete="address-level2"
+                  required
+                  minlength="3"
+                />
+                <p class="pesan-galat">Kecamatan / kota wajib diisi.</p>
+              </div>
+            </section>
+
+            <!-- METODE PEMBAYARAN-->
+            <section class="kotak" aria-labelledby="judul-bayar">
+              <h2 class="kotak-judul" id="judul-bayar">
+                <span class="kotak-nomor">3</span>Pembayaran
+              </h2>
+
+              <div class="kolom-isian">
+                <label for="isian-pembayaran">Metode pembayaran</label>
+                <select id="isian-pembayaran" required>
+                  <option value="">Pilih metode pembayaran</option>
+                  <option value="Tunai di kedai">Tunai di kedai</option>
+                  <option value="QRIS">QRIS</option>
+                  <option value="Transfer bank">Transfer bank</option>
+                </select>
+                <p class="pesan-galat">Pilih metode pembayaran.</p>
+              </div>
+
+              <div class="kolom-isian">
+                <label for="isian-catatan"
+                  >Catatan <span class="redup">(opsional)</span></label
+                >
+                <textarea
+                  id="isian-catatan"
+                  rows="2"
+                  maxlength="200"
+                ></textarea>
+              </div>
+            </section>
+          </form>
+
+          <!-- RINGKASAN PESANAN DAN TOMBOL BUAT PESANAN-->
+          <aside class="struk struk-menempel" aria-label="Ringkasan pesanan">
+            <h2>Ringkasan pesanan</h2>
+            <div class="daftar-ringkas" id="ringkasan-checkout"></div>
+            <div class="struk-baris struk-total">
+              <span>Total bayar</span><span id="checkout-total"></span>
+            </div>
+            <button
+              type="submit"
+              form="form-checkout"
+              class="tombol tombol-utama tombol-lebar tombol-kirim"
+            >
+              Buat pesanan
+            </button>
+          </aside>
+        </div>
+      </section>
+
+      <!--MENU SUKSES-->
+      <section id="halaman-sukses">
+        <div id="sukses-tidak-ada" class="sukses" hidden>
+          <h1>Pesanan tidak ditemukan</h1>
+          <p>Silakan kembali ke katalog dan buat pesanan terlebih dahulu.</p>
+          <div class="sukses-tombol">
+            <a class="tombol tombol-utama" href="#/">Kembali ke katalog</a>
+          </div>
+        </div>
+
+        <article id="isi-sukses" class="sukses" hidden>
+          <h1>Pesanan berhasil dibuat!</h1>
+          <p id="sukses-pemesan"></p>
+          <div class="struk">
+            <div class="daftar-ringkas" id="sukses-daftar"></div>
+            <div class="struk-baris struk-total">
+              <span>Total bayar</span><span id="sukses-total"></span>
+            </div>
+          </div>
+          <div class="sukses-tombol">
+            <a class="tombol tombol-utama" href="#/">Pesan lagi</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!--MENU FOOTER-->
+    <footer class="kaki">
+      <div class="wadah">
+        <div class="kaki-kolom">
+          <!--FITUR PROFIL KEDAI-->
+          <section>
+            <p class="kaki-logo">
+              <img src="logo.png" alt="" width="40" height="40" />
+              Kedai Teh Desa
+            </p>
+            <p
+              menghadirkan
+              kehangatan
+              dan
+              kesegaran
+              alam
+              pegunungan
+              langsung
+              ke
+              cangkir
+              Anda.
+              Mengusung
+              konsep
+              tradisional
+              yang
+              berpadu
+              dengan
+              sentuhan
+              modern
+            ></p>
+          </section>
+
+          <!--JAM BUKA DAN KONTAK-->
+          <section>
+            <h2 class="kaki-judul">Jam buka &amp; kontak</h2>
+            <dl class="kaki-daftar">
+              <div>
+                <dt>Senin - Minggu</dt>
+                <dd>09.00 - 17.30 WIB</dd>
+              </div>
+            </dl>
+            <p class="kaki-info">Pesan Online, ambil di kedai</p>
+            <p class="kaki-info">Instagram: @kedaitehhdesa</p>
+          </section>
+
+          <!--METODE PEMBAYARAN-->
+          <section>
+            <h2 class="kaki-judul">Metode pembayaran</h2>
+            <p class="kaki-info">Menerima pembayaran tunai &amp; digital</p>
+            <ul class="kaki-bayar">
+              <li>TUNAI</li>
+              <li>QRIS</li>
+              <li>TRANSFER</li>
+            </ul>
+          </section>
+        </div>
+        <!--FITUR HAK CIPTA-->
+        <p class="kaki-hakcipta">2026@UKKPPLG.SAJUNJUNSA</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
